@@ -18,10 +18,19 @@ gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
 
+group :development do # Stuff you do not want in :test env
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'web-console', '>= 3.3.0'
+end
+
 group :development, :test do
+  gem 'capybara'
+  gem 'poltergeist'
+  gem 'launchy'
+  gem 'minitest-reporters'
   gem 'pry-byebug'
   gem 'pry-rails'
-  gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
